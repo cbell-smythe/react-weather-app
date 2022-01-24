@@ -1,0 +1,8 @@
+.Footer {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 15px;
+}
+.Footer .plain {
+  text-decoration: none;
+}

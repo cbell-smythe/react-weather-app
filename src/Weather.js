@@ -6,6 +6,7 @@ import CurrentWeather from "./CurrentWeather";
 import HourlyForecast from "./HourlyForecast";
 import SunPosition from "./SunPosition";
 import AdditionalWeather from "./AdditionalWeather";
+import Footer from "./Footer";
 
 export default function Weather() {
   return (
@@ -27,6 +28,7 @@ export default function Weather() {
             <div className="col-5"></div>
           </div>
         </div>
+        <Footer />
       </div>
     </div>
   );
