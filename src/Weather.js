@@ -4,6 +4,8 @@ import Search from "./Search";
 import City from "./City";
 import CurrentWeather from "./CurrentWeather";
 import HourlyForecast from "./HourlyForecast";
+import SunPosition from "./SunPosition";
+import AdditionalWeather from "./AdditionalWeather";
 
 export default function Weather() {
   return (
@@ -17,7 +19,12 @@ export default function Weather() {
               <CurrentWeather />
               <hr />
               <HourlyForecast />
+              <hr />
+              <SunPosition />
+              <hr />
+              <AdditionalWeather />
             </div>
+            <div className="col-5"></div>
           </div>
         </div>
       </div>
