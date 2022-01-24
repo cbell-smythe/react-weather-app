@@ -1,0 +1,30 @@
+.Weather {
+  font-family: "Roboto", sans-serif;
+}
+.Weather .WeatherAppWrapper {
+  max-width: 500px;
+  margin: 100px auto;
+}
+.Weather .WeatherApp {
+  padding: 20px;
+  border: 2px solid #7047a3;
+  opacity: 1;
+  border-radius: 3px;
+  background: #c8f0f0;
+}
+.Weather ul {
+  margin: 0;
+  padding: 0;
+}
+.Weather li {
+  list-style: none;
+  font-weight: 400;
+  line-height: 25px;
+}
+.Weather hr {
+  margin: 10px;
+  padding: 0;
+  border: 1px solid #7047a3;
+  opacity: 1;
+  background: #fff;
+}
