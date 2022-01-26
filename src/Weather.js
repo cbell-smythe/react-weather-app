@@ -6,12 +6,12 @@ import HourlyForecast from "./HourlyForecast";
 import SunPosition from "./SunPosition";
 import Footer from "./Footer";
 
-export default function Weather() {
-  let [loaded, setLoaded] = useState(false);
-  let [weatherData, setWeatherData] = useState({});
+export default function Weather(props) {
+  let [weatherData, setWeatherData] = useState({ loaded: false });
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
+      loaded: true,
       city: response.data.name,
       date: "monday 7:45 PM",
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png",
@@ -21,11 +21,9 @@ export default function Weather() {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
     });
-
-    setLoaded(true);
   }
 
-  if (loaded) {
+  if (weatherData.loaded) {
     return (
       <div className="Weather">
         <div className="WeatherAppWrapper">
@@ -96,8 +94,7 @@ export default function Weather() {
     );
   } else {
     let apiKey = "40687d56eaf0d831bbcf4565c75ed97f";
-    let city = "Mississauga";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
     return "Loading...";

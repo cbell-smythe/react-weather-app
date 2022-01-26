@@ -7,7 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Weather />
+    <Weather defaultCity="Mississauga" />
   </React.StrictMode>,
   document.getElementById("root")
 );
