@@ -1,7 +1,6 @@
 import React from "react";
 import "./Weather.css";
 
-import CurrentWeather from "./CurrentWeather";
 import HourlyForecast from "./HourlyForecast";
 import SunPosition from "./SunPosition";
 import AdditionalWeather from "./AdditionalWeather";
@@ -12,6 +11,10 @@ export default function Weather() {
     city: "Toronto",
     date: "monday 7:45 PM",
   };
+  //let apiKey = "40687d56eaf0d831bbcf4565c75ed97f";
+  //let city = "Toronto";
+  //let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
   return (
     <div className="Weather">
       <div className="WeatherAppWrapper">
@@ -44,7 +47,20 @@ export default function Weather() {
           </div>
           <div className="row">
             <div className="col-7">
-              <CurrentWeather />
+              <div>
+                <div className="CurrentWeather">
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
+                    className="float-left"
+                    alt="mostly cloudy"
+                  />
+                  <span>
+                    -7
+                    <span className="Units">°C</span>
+                  </span>
+                </div>
+                <div className="WeatherDescription">mostly cloudy</div>
+              </div>
               <hr />
               <HourlyForecast />
               <hr />
