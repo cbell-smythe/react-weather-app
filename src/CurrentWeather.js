@@ -1,27 +1,26 @@
 import React from "react";
+import axios from "axios";
 import "./CurrentWeather.css";
 
 export default function CurrentWeather() {
-  let weatherData = {
-    description: "mostly cloudy",
-    imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png",
-    currentTemperature: -7,
-  };
+  let apiKey = "40687d56eaf0d831bbcf4565c75ed97f";
+  let city = "Mississauga";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
   return (
     <div>
       <div className="CurrentWeather">
         <img
-          src={weatherData.imgUrl}
+          src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
           className="float-left"
-          alt={weatherData.description}
+          alt="mostly cloudy"
         />
         <span>
-          {weatherData.currentTemperature}
+          -7
           <span className="Units">°C</span>
         </span>
       </div>
-      <div className="WeatherDescription">{weatherData.description}</div>
+      <div className="WeatherDescription">mostly cloudy</div>
     </div>
   );
 }

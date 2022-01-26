@@ -2,6 +2,11 @@ import React from "react";
 import "./Search.css";
 
 export default function Search() {
+  let weatherData = {
+    city: "Mississauga",
+    date: "monday 7:45 PM",
+  };
+
   return (
     <div className="Search">
       <form className="mb-2">
@@ -24,6 +29,10 @@ export default function Search() {
           </div>
         </div>
       </form>
+      <div className="City">
+        <h1>{weatherData.city}</h1>
+        <h2>last refresh @ {weatherData.date}</h2>
+      </div>
     </div>
   );
 }

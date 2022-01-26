@@ -1,7 +1,7 @@
 import React from "react";
 import "./Weather.css";
 import Search from "./Search";
-import City from "./City";
+
 import CurrentWeather from "./CurrentWeather";
 import HourlyForecast from "./HourlyForecast";
 import SunPosition from "./SunPosition";
@@ -16,7 +16,6 @@ export default function Weather() {
           <Search />
           <div className="row">
             <div className="col-7">
-              <City />
               <CurrentWeather />
               <hr />
               <HourlyForecast />
