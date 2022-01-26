@@ -3,7 +3,7 @@ import "./Search.css";
 
 export default function Search() {
   let weatherData = {
-    city: "Mississauga",
+    city: "Toronto",
     date: "monday 7:45 PM",
   };
 
