@@ -71,3 +71,9 @@
   font-weight: bold;
   text-align: center;
 }
+.AdditionalWeather {
+  padding: 12px;
+  text-align: left;
+  color: #474748;
+  font-size: 18px;
+}
