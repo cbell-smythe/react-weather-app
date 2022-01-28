@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
-import FormattedDate from "./FormattedDate";
+import City from "./City";
 import HourlyForecast from "./HourlyForecast";
 import SunPosition from "./SunPosition";
 import Footer from "./Footer";
+import WeatherInfo from "./WeatherInfo";
+import AdditionalWeather from "./AdditionalWeather";
 
 export default function Weather(props) {
   let [weatherData, setWeatherData] = useState({ loaded: false });
@@ -49,43 +51,17 @@ export default function Weather(props) {
                   </div>
                 </div>
               </form>
-              <div className="City">
-                <h1>{weatherData.city}</h1>
-                <h2>
-                  last refresh @ <FormattedDate date={weatherData.date} />
-                </h2>
-              </div>
+              <City data={weatherData} />
             </div>
             <div className="row">
               <div className="col-7">
-                <div>
-                  <div className="CurrentWeather">
-                    <img
-                      src={weatherData.iconUrl}
-                      className="float-left"
-                      alt="mostly cloudy"
-                    />
-                    <span>
-                      {Math.round(weatherData.temperature)}
-                      <span className="Units">°C</span>
-                    </span>
-                  </div>
-                  <div className="WeatherDescription">
-                    {weatherData.description}
-                  </div>
-                </div>
+                <WeatherInfo data={weatherData} />
                 <hr />
                 <HourlyForecast />
                 <hr />
                 <SunPosition />
                 <hr />
-                <div className="AdditionalWeather">
-                  <ul>
-                    <li>Feels Like: {Math.round(weatherData.feelsLike)}°</li>
-                    <li>Humidity: {weatherData.humidity}%</li>
-                    <li>Wind: {Math.round(weatherData.wind)} km/h</li>
-                  </ul>
-                </div>
+                <AdditionalWeather data={weatherData} />
               </div>
               <div className="col-5"></div>
             </div>
