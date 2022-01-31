@@ -67,6 +67,10 @@
   top: -30px;
 }
 
+.CurrentWeather a {
+  text-decoration: none;
+}
+
 .WeatherDescription {
   font-weight: bold;
   text-align: center;
