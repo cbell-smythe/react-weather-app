@@ -7,6 +7,7 @@ import SunPosition from "./SunPosition";
 import Footer from "./Footer";
 import WeatherInfo from "./WeatherInfo";
 import AdditionalWeather from "./AdditionalWeather";
+import DayForecast from "./DayForecast";
 
 export default function Weather(props) {
   let [weatherData, setWeatherData] = useState({ loaded: false });
@@ -69,10 +70,10 @@ export default function Weather(props) {
                   </div>
                 </div>
               </form>
-              <City data={weatherData} />
             </div>
             <div className="row">
               <div className="col-7">
+                <City data={weatherData} />
                 <WeatherInfo data={weatherData} />
                 <hr />
                 <HourlyForecast />
@@ -81,7 +82,9 @@ export default function Weather(props) {
                 <hr />
                 <AdditionalWeather data={weatherData} />
               </div>
-              <div className="col-5"></div>
+              <div className="col-5">
+                <DayForecast />
+              </div>
             </div>
           </div>
           <Footer />
