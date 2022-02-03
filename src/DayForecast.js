@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./DayForecast.css";
 import axios from "axios";
-import WeatherIcon from "./WeatherIcon";
 import WeatherForecastDay from "./WeatherForecastDay";
 
 export default function DayForecast(props) {
