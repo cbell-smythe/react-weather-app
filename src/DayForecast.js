@@ -18,6 +18,14 @@ export default function DayForecast(props) {
       <div className="DayForecast">
         <ul>
           <WeatherForecastDay data={forecast[0]} />
+          <hr />
+          <WeatherForecastDay data={forecast[1]} />
+          <hr />
+          <WeatherForecastDay data={forecast[2]} />
+          <hr />
+          <WeatherForecastDay data={forecast[3]} />
+          <hr />
+          <WeatherForecastDay data={forecast[4]} />
         </ul>
       </div>
     );
