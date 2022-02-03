@@ -14,9 +14,9 @@ export default function Weather(props) {
   let [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       loaded: true,
+      coordinates: response.data.coord,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
       iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
@@ -29,7 +29,7 @@ export default function Weather(props) {
   }
 
   function search() {
-    let apiKey = "40687d56eaf0d831bbcf4565c75ed97f";
+    let apiKey = "1a6432c5ca7b6f9b0bee45c98d54ea71";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -83,7 +83,7 @@ export default function Weather(props) {
                 <AdditionalWeather data={weatherData} />
               </div>
               <div className="col-5">
-                <DayForecast />
+                <DayForecast coordinates={weatherData.coordinates} />
               </div>
             </div>
           </div>
