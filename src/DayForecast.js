@@ -13,7 +13,6 @@ export default function DayForecast(props) {
   }
 
   if (loaded) {
-    console.log(forecast);
     return (
       <div className="DayForecast">
         <ul>

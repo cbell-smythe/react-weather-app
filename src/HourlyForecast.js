@@ -1,7 +1,8 @@
 import React from "react";
+import WeatherIcon from "./WeatherIcon";
 import "./HourlyForecast.css";
 
-export default function HourlyForecast() {
+export default function HourlyForecast(props) {
   return (
     <div className="HourlyForecast">
       <div className="row">
@@ -10,7 +11,7 @@ export default function HourlyForecast() {
             src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
             alt="partly-cloudy"
           />
-          5PM
+          5PM{" "}
         </div>
         <div className="col-3">
           <img
