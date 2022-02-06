@@ -10,7 +10,7 @@ export default function WeatherInfo(props) {
           className="float-left"
           alt="mostly cloudy"
         />
-        <WeatherTemperature celsius={props.data.temperature} />
+        <WeatherTemperature celsius={Math.round(props.data.temperature)} />
       </div>
       <div className="WeatherDescription">{props.data.description}</div>
     </div>
