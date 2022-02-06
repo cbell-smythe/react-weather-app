@@ -76,7 +76,7 @@ export default function Weather(props) {
                 <City data={weatherData} />
                 <WeatherInfo data={weatherData} />
                 <hr />
-                <HourlyForecast />
+                <HourlyForecast coordinates={weatherData.coordinates} />
                 <hr />
                 <SunPosition />
                 <hr />
