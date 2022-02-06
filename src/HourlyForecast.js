@@ -12,7 +12,6 @@ export default function HourlyForecast(props) {
   }, [props.coordinates]);
 
   function handleResponse(response) {
-    console.log(response.data);
     setHourly(response.data.hourly);
     setLoaded(true);
   }

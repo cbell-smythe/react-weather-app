@@ -13,7 +13,17 @@ export default function Footer() {
           className="plain"
         >
           open-sourced on Github
+        </a>{" "}
+        and{" "}
+        <a
+          href="https://infallible-varahamihira-1cbfea.netlify.app/"
+          target="_blank"
+          rel="noreferrer"
+          className="plain"
+        >
+          hosted on Netlify
         </a>
+        .
       </footer>
     </div>
   );

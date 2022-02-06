@@ -22,6 +22,8 @@ export default function Weather(props) {
       iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
+      sunrise: response.data.sys.sunrise,
+      sunset: response.data.sys.sunset,
       feelsLike: response.data.main.feels_like,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
@@ -78,7 +80,7 @@ export default function Weather(props) {
                 <hr />
                 <HourlyForecast coordinates={weatherData.coordinates} />
                 <hr />
-                <SunPosition />
+                <SunPosition data={weatherData} />
                 <hr />
                 <AdditionalWeather data={weatherData} />
               </div>
