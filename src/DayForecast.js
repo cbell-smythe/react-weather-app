@@ -16,7 +16,7 @@ export default function DayForecast(props) {
     setLoaded(true);
   }
   function load() {
-    let apiKey = "1a6432c5ca7b6f9b0bee45c98d54ea71";
+    let apiKey = "40687d56eaf0d831bbcf4565c75ed97f";
     let lat = props.coordinates.lat;
     let lon = props.coordinates.lon;
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
